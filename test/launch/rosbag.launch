@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<launch>
+    <param name="/use_sim_time" value="true"/>
+    <arg name="stdout" default="screen" />
+    <node pkg="rosbag" type="play" name="player" output="screen" args="-l --clock /home/loi1804/Desktop/ros_workspace/1_trans_0.bag"/>
+    <node pkg="tf" type="static_transform_publisher" name="l2c_tf" args="-0.791237 -0.088286 0.416412 -0.00489836 0.00615539 -0.00132632 velodyne stereo 100" />
+</launch>
